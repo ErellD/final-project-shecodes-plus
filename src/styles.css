@@ -47,3 +47,8 @@ li {
 .city-search-form {
   margin-bottom: 20px;
 }
+
+.link-source-code {
+  margin: 0 auto;
+  padding: 10px;
+}
