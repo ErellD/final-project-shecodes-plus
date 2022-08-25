@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Final Project</title>
-    <!-- CSS only -->
+ 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,6 +17,7 @@
   </head>
   <body>
     <div class="container">
+      <div class="weather-app-wrapper">
       <div class="weather-app">
         <form class="city-search-form" id="search-form">
           <div class="row">
@@ -38,37 +39,37 @@
               />
             </div>
             <div class="col-3">
-          <button class="btn btn-success w-100" id="current-location-button">Current </button></div>
-        <h1 id="city-name"></h1>
+          <button class="btn btn-outline-primary w-100" id="current-location-button">Current </button></div>
+         <div class="row">
+          <h1 class="col-6" id="city-name"></h1>
 
-        <ul>
+        <ul class="col-6 date-time " >
           <li id="date-change">Today is Wednesday 12:42</li>
           <li id="weather-desc"></li>
         </ul>
+</div>
+      
 
-        <img
-          src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-          alt="partly cloudy"
-          class="weather-icon"
-        />
-
-        <div class="row">
+        <div class="row"></div>
           <div class="col-6">
             <span class="temperature" id="temperature"></span>
             <span class="units"> °C | <a href="#"> °F </a> </span>
           </div>
-          <div class="col-6">
+          <div class="col-6"><img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Cloudy" class="weather-icon"></div>
+          </div>
+          <div class="row">
+          <div class="col-6 weather-details">
             <ul>
               <li>Humidity: <span id="humidity">10</span>%</li>
               <li>Wind: <span id="wind-speed">50</span> km/h</li>
             </ul>
-          </div>
+          </div></div>
         </div>
-      </div>
-    </div>
+      
+   
     <p class="link-source-code">
-<a href="https://github.com/ErellD/final-project-shecodes-plus">Open Source Code</a> 
-By Erell Delesvaux</p>
+<a href="https://github.com/ErellD/final-project-shecodes-plus">Open-source code</a> 
+by Erell Delesvaux</p></div> </div></div>
     <script src="script/script.js"></script>
   </body>
 </html>

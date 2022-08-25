@@ -1,13 +1,16 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: #507cd3;
+  background-image: url("images/clouds.jpg");
+  background-color: #ebf1fe;
 }
 h1 {
-  color: rgb(135, 135, 135);
-  font-size: 24px;
+  color: #507cd3;
+  font-size: 30px;
   font-weight: 100;
   line-height: 28px;
   margin: 0;
-  padding: 10px;
+  padding: 20px;
 }
 
 ul {
@@ -16,23 +19,23 @@ ul {
 }
 
 li {
-  color: rgb(135, 135, 135);
+  color: #507cd3;
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
   list-style: none;
 }
 
-.weather-app {
-  border: 1px solid #dadde1;
-  padding: 15px;
-  margin: 20px auto;
-  border-radius: 10px;
-  max-width: 600px;
+.date-time {
+  padding: 20px 20px 10px 20px;
 }
+.weather-details {
+  padding-top: 10px;
+}
+
 .temperature {
-  color: rgb(33, 33, 33);
-  font-size: 64px;
+  color: #507cd3;
+  font-size: 100px;
   font-weight: 400;
   line-height: 1;
 }
@@ -41,15 +44,29 @@ li {
   top: -34px;
 }
 .weather-icon {
-  height: 64px;
-  width: 64px;
+  height: 100px;
+  width: 100px;
 }
 .city-search-form {
   margin-bottom: 20px;
 }
 
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 20px auto;
+}
+.weather-app {
+  border: 1px solid #507cd3;
+  padding: 15px;
+  border-radius: 10px;
+  background: linear-gradient(
+    359.3deg,
+    rgb(196, 214, 252) 1%,
+    rgba(187, 187, 187, 0) 70.9%
+  );
+}
 .link-source-code {
-  text-align: center;
   display: block;
   margin: 0 auto;
+  padding-top: 10px;
 }
