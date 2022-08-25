@@ -1,7 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #507cd3;
-  background-image: url("images/clouds.jpg");
   background-color: #ebf1fe;
 }
 h1 {
@@ -26,6 +25,18 @@ li {
   list-style: none;
 }
 
+hr {
+  border-top: 1px dotted #507cd3;
+}
+
+.btn {
+  border-color: #507cd3;
+  color: #507cd3;
+}
+.btn:hover {
+  background-color: #507cd3;
+  color: #ebf1fe;
+}
 .date-time {
   padding: 20px 20px 10px 20px;
 }
@@ -41,11 +52,27 @@ li {
 }
 .units {
   position: relative;
-  top: -34px;
+  top: -58px;
 }
 .weather-icon {
-  height: 100px;
-  width: 100px;
+  font-size: 100px;
+}
+.tomorrow-icon {
+  font-size: 50px;
+  text-align: center;
+  padding: 10px;
+}
+.tomorrow-day {
+  font-weight: bold;
+  text-align: center;
+}
+.tomorrow-temperature {
+  font-size: small;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.tomorrow-weather {
+  padding: ;
 }
 .city-search-form {
   margin-bottom: 20px;
@@ -59,6 +86,7 @@ li {
   border: 1px solid #507cd3;
   padding: 15px;
   border-radius: 10px;
+  box-shadow: 3px 3px 3px#507cd3;
   background: linear-gradient(
     359.3deg,
     rgb(196, 214, 252) 1%,
@@ -66,6 +94,7 @@ li {
   );
 }
 .link-source-code {
+  font-size: smaller;
   display: block;
   margin: 0 auto;
   padding-top: 10px;

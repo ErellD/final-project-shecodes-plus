@@ -13,6 +13,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://kit.fontawesome.com/9ea38058f6.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
@@ -35,11 +36,11 @@
               <input
                 type="submit"
                 value="Search"
-                class="form-control btn btn-primary shadow-sm"
+                class="form-control btn shadow-sm"
               />
             </div>
             <div class="col-3">
-          <button class="btn btn-outline-primary w-100" id="current-location-button">Current </button></div>
+          <button class="btn w-100 shadow-sm" id="current-location-button">Current </button></div>
          <div class="row">
           <h1 class="col-6" id="city-name"></h1>
 
@@ -50,12 +51,12 @@
 </div>
       
 
-        <div class="row"></div>
+        <div class="row">
           <div class="col-6">
             <span class="temperature" id="temperature"></span>
             <span class="units"> °C | <a href="#"> °F </a> </span>
           </div>
-          <div class="col-6"><img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Cloudy" class="weather-icon"></div>
+          <div class="col-6"><i class="fa-solid fa-cloud-sun weather-icon"></i></div>
           </div>
           <div class="row">
           <div class="col-6 weather-details">
@@ -64,12 +65,56 @@
               <li>Wind: <span id="wind-speed">50</span> km/h</li>
             </ul>
           </div></div>
-        </div>
-      
-   
+<hr>
+<div class="row">
+  <div class="col-2 tomorrow-weather">
+<ul>
+  <li class="tomorrow-day">Tomorrow</li>
+  <li class="tomorrow-temperature">15 / 24</li>
+  <li><i class="fa-solid fa-cloud-sun tomorrow-icon"></i></li>
+</ul>
+</div>
+ <div class="col-2 tomorrow-weather">
+<ul>
+  <li class="tomorrow-day">Saturday</li>
+  <li class="tomorrow-temperature">15 / 24</li>
+  <li><i class="fa-solid fa-cloud-sun tomorrow-icon"></i></li>
+</ul>
+</div>
+ <div class="col-2 tomorrow-weather">
+<ul>
+  <li class="tomorrow-day">Sunday</li>
+  <li class="tomorrow-temperature">15 / 24</li>
+  <li><i class="fa-solid fa-cloud-sun tomorrow-icon"></i></li>
+</ul>
+</div>
+ <div class="col-2 tomorrow-weather">
+<ul>
+  <li class="tomorrow-day">Monday</li>
+  <li class="tomorrow-temperature">15 / 24</li>
+  <li><i class="fa-solid fa-cloud-sun tomorrow-icon"></i></li>
+</ul>
+</div>
+ <div class="col-2 tomorrow-weather">
+<ul>
+  <li class="tomorrow-day">Tuesday</li>
+  <li class="tomorrow-temperature">15 / 24</li>
+  <li><i class="fa-solid fa-cloud-sun tomorrow-icon"></i></li>
+ </ul>
+</div>
+ <div class="col-2 tomorrow-weather">
+<ul>
+  <li class="tomorrow-day">Tuesday</li>
+  <li class="tomorrow-temperature">15 / 24</li>
+  <li><i class="fa-solid fa-cloud-sun tomorrow-icon"></i></li>
+ </ul>
+</div>
+</div>
+</div>
+</div>
     <p class="link-source-code">
-<a href="https://github.com/ErellD/final-project-shecodes-plus">Open-source code</a> 
-by Erell Delesvaux</p></div> </div></div>
+<a href="https://github.com/ErellD/final-project-shecodes-plus">Open-source code</a> by Erell Delesvaux</p>
+</div> </div>
     <script src="script/script.js"></script>
   </body>
 </html>
