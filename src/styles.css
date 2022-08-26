@@ -60,11 +60,11 @@ hr {
   position: relative;
   top: -58px;
 }
-.units.active {
+.active {
   color: #507cd3;
   text-decoration: none;
 }
-.units.active:hover {
+.active:hover {
   text-decoration: none;
   cursor: default;
 }
