@@ -19,10 +19,15 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 let changeDate = document.querySelector("#date-change");
-changeDate.innerHTML = `Today is ${day} ${hours}:${minutes}`;
+changeDate.innerHTML = `Last updated: ${day} ${hours}:${minutes}`;
 
 function displayWeather(response) {
-  document.querySelector("#city-name").innerHTML = response.data.name;
+  console.log(response);
+  let cityName = response.data.name;
+  let countryName = response.data.sys.country;
+  document.querySelector(
+    "#city-name"
+  ).innerHTML = `${cityName}, ${countryName}`;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -31,7 +36,7 @@ function displayWeather(response) {
     response.data.wind.speed
   );
   document.querySelector("#weather-desc").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
 }
 
 function search(city) {
