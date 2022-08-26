@@ -1,3 +1,5 @@
+// display main time and date
+
 let now = new Date();
 let days = [
   "Sunday",
@@ -21,6 +23,16 @@ if (minutes < 10) {
 let changeDate = document.querySelector("#date-change");
 changeDate.innerHTML = `Last updated: ${day} ${hours}:${minutes}`;
 
+// set city search
+function retrieveCityInfo(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-input").value;
+  search(city);
+}
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", retrieveCityInfo);
+
+// search engine
 function displayWeather(response) {
   console.log(response);
   let cityName = response.data.name;
@@ -37,24 +49,19 @@ function displayWeather(response) {
   );
   document.querySelector("#weather-desc").innerHTML =
     response.data.weather[0].description;
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
+  );
 }
 
 function search(city) {
   let apiKey = "eca78134d1ed96b1b6068a57ba23b8ed";
-
   let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
   let apiUrl = `${apiEndPoint}?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
-
-function retrieveCityInfo(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city-input").value;
-  search(city);
-}
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", retrieveCityInfo);
 
 function showLocation(position) {
   let apiKey = "eca78134d1ed96b1b6068a57ba23b8ed";
@@ -63,6 +70,8 @@ function showLocation(position) {
   let apiUrl = ` https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
+
+// Define current position of the user
 function getCurrentPosition(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showLocation);
