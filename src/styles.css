@@ -55,9 +55,18 @@ hr {
   font-weight: 400;
   line-height: 1;
 }
+
 .units {
   position: relative;
   top: -58px;
+}
+.units.active {
+  color: #507cd3;
+  text-decoration: none;
+}
+.units.active:hover {
+  text-decoration: none;
+  cursor: default;
 }
 .weather-icon {
   display: block;
