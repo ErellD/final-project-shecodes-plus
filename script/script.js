@@ -1,5 +1,3 @@
-// display main time and date
-
 function formatDate(timestamp) {
   let now = new Date(timestamp);
   let hours = now.getHours();
@@ -10,27 +8,25 @@ function formatDate(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let days =
-    days[
-      ("Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday")
-    ];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   let day = days[now.getDay()];
   return `Last updated: ${day} ${hours}:${minutes}`;
 }
-// set city search
+
 function retrieveCityInfo(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
   search(city);
 }
 
-// search engine
 function displayWeather(response) {
   let cityName = response.data.name;
   let countryName = response.data.sys.country;
@@ -71,7 +67,6 @@ function showLocation(position) {
   axios.get(apiUrl).then(displayWeather);
 }
 
-// Define current position of the user
 function getCurrentPosition(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showLocation);
