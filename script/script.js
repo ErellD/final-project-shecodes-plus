@@ -27,6 +27,11 @@ function retrieveCityInfo(event) {
   search(city);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+  forecastElement.innerHTML = "Forecast";
+}
+
 function displayWeather(response) {
   let cityName = response.data.name;
   let countryName = response.data.sys.country;
@@ -104,3 +109,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 search("Paris");
+displayForecast();

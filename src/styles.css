@@ -1,7 +1,6 @@
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: #507cd3;
-  background-color: #ebf1fe;
 }
 h1 {
   color: #507cd3;
@@ -75,19 +74,18 @@ hr {
   width: 150px;
   height: 150px;
 }
+
+.weather-forecast {
+  text-align: center;
+}
 .tomorrow-icon {
   font-size: 50px;
-  text-align: center;
   padding: 10px;
 }
-.tomorrow-day {
-  font-weight: bold;
-  text-align: center;
-}
-.tomorrow-temperature {
+
+.weather-forecast-temperature {
   font-size: small;
   padding-bottom: 10px;
-  text-align: center;
 }
 
 .city-search-form {
@@ -104,9 +102,9 @@ hr {
   border-radius: 10px;
   box-shadow: 3px 3px 3px#507cd3;
   background: linear-gradient(
-    359.3deg,
-    rgb(196, 214, 252) 1%,
-    rgba(187, 187, 187, 0) 70.9%
+    180.3deg,
+    rgb(214, 224, 255) 37.2%,
+    rgb(254, 168, 168) 137.3%
   );
 }
 .link-source-code {
