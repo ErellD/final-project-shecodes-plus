@@ -29,7 +29,28 @@ function retrieveCityInfo(event) {
 
 function displayForecast() {
   let forecastElement = document.querySelector("#weather-forecast");
-  forecastElement.innerHTML = "Forecast";
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thursday", "Friday", "Saturday", "Sunday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+          
+          <div class="col-2">
+<div class="weather-forecast-date">${day}
+</div>
+<img src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png" alt="">
+<div class="weather-forecast-temperature">
+  <span class="weather-forecast-temp-max">18°</span>
+   <span class="weather-forecast-temp-min">12°</span>
+</div>
+          </div>
+          `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function displayWeather(response) {
