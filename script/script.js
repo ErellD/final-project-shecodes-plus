@@ -40,7 +40,6 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#weather-forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Thursday", "Friday", "Saturday", "Sunday"];
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
