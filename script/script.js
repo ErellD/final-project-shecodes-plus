@@ -126,6 +126,6 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", retrieveCityInfo);
 
 let currentButton = document.querySelector("#current-location-button");
-currentButton.addEventListener("submit", getCurrentPosition);
+currentButton.addEventListener("click", getCurrentPosition);
 
 search("Paris");
